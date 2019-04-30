@@ -24,6 +24,18 @@ body {
   z-index:100;
   background-color: rgba(255,255,255,0.7);
 }
+.x {
+  position:absolute;
+  top: 10px;
+  left:260px;
+  z-index: 101;
+}
+.cierra {
+  background-color: red;
+}
+.abre {
+  background-color: blue;
+}
 
 .pad2 {
   padding:20px;
