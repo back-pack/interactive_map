@@ -19,6 +19,9 @@
         <h1>Our locations</h1>
       </div>
     <div id='listings' class='listings'></div>
+    <div class="">
+      <input type="checkbox" name="" value="">
+    </div>
     </div>
     <div id='map' class='map'> </div>
 
@@ -355,7 +358,6 @@
 
   function buildLocationList(data) {
     console.log(dataset);
-
     for (i = 0; i < data.features.length; i++) {
       var currentFeature = data.features[i];
       var prop = currentFeature.properties;
