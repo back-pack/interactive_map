@@ -42,11 +42,6 @@ body {
   left:10px;
 }
 
-@media screen and (max-width: 600px) {
-  div.example {
-    display: none;
-  }
-}
 
 .pad2 {
   padding:20px;
