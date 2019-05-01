@@ -28,14 +28,22 @@
     <div id='map' class='map'> </div>
 
   <script>
+  var sidebar = document.querySelector('.sidebar');
+  var x = document.querySelector('.x');
+  
   // toggle menu position 
   function hide() {
-    var sidebar = document.querySelector('.sidebar');
-    var x = document.querySelector('.x');
     sidebar.classList.toggle('cierra');
     x.classList.toggle('cierrax');
   }
   
+  if (window.matchMedia('(max-width: 700px)').matches) {
+  sidebar.classList.add('cierra');
+  x.classList.add('cierrax'); 
+  } else {
+  sidebar.classList.remove('cierra');
+  x.classList.remove('cierrax'); 
+  }
 
   mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWFub2ZyZWRkaSIsImEiOiJjanV0d3hsZnkwY3U1NGRvM2V6eWs1M2pnIn0.LmRUmCRedA-7viHwBugTfA';
 
