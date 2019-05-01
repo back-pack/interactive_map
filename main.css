@@ -74,7 +74,7 @@ a:hover {
   border-bottom:1px solid #eee;
   min-height:60px;
   line-height:60px;
-  padding:0 10px;
+  padding-left:10px;
   background-color: #00853e;
   color: #fff;
 }
@@ -85,11 +85,16 @@ a:hover {
   padding-bottom:60px;
 }
 
-.listings .item {
+.listings {
   display:block;
   border-bottom:1px solid #eee;
   padding:10px;
   text-decoration:none;
+}
+
+.item {
+  background-color: rgba(255,255,255,0.25);
+  padding-left: 10px;
 }
 
 .listings .item:last-child { border-bottom:none; }
