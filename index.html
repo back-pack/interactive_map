@@ -129,6 +129,9 @@ coordenadas
     trackUserLocation: true
 }));
 
+  var brujula = new mapboxgl.NavigationControl();
+  map.addControl(brujula, 'top-right');
+
   var stores = {
     "type": "FeatureCollection",
     "features": [
