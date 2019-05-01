@@ -23,18 +23,23 @@ body {
   border-right:1px solid rgba(0,0,0,0.25);
   z-index:100;
   background-color: rgba(255,255,255,0.7);
+  transition-duration: 0.5s
 }
+
 .x {
   position:absolute;
   top: 10px;
   left:260px;
   z-index: 101;
+  transition-duration: 0.5s;
 }
+
 .cierra {
-  background-color: red;
+  left:-250px;
 }
-.abre {
-  background-color: blue;
+
+.cierrax {
+  left:10px;
 }
 
 .pad2 {

@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="x"><i class="material-icons" style="font-size: 41px;">close</i></div>
+    <div class="x" onclick="hide()"><i class="material-icons" style="font-size: 41px;">close</i></div>
     <div class='sidebar'>
       <div class='heading'>
         <h1>Our locations</h1>
@@ -29,20 +29,13 @@
 
   <script>
   // toggle menu position 
-  function classToggle() {
-    this.classList.toggle('cierra');
-    this.classList.toggle('abre');
+  function hide() {
+    var sidebar = document.querySelector('.sidebar');
+    var x = document.querySelector('.x');
+    sidebar.classList.toggle('cierra');
+    x.classList.toggle('cierrax');
   }
-  document.querySelector('.x').addEventListener('click', classToggle);
-
-  // This will let you use the .remove() function later on
-  if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-      if (this.parentNode) {
-          this.parentNode.removeChild(this);
-      }
-    };
-  }
+  
 
   mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWFub2ZyZWRkaSIsImEiOiJjanV0d3hsZnkwY3U1NGRvM2V6eWs1M2pnIn0.LmRUmCRedA-7viHwBugTfA';
 
