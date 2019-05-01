@@ -18,6 +18,8 @@
   <body>
 
     <div class="x" onclick="hide()"><i class="material-icons" style="font-size: 41px;">close</i></div>
+    <!-- <div class="geo" onclick="hide()"><i class="material-icons" style="font-size: 41px;">gps_fixed</i>  -->     
+    </div>
     <div class='sidebar'>
       <div id="accordion">
         <div class="heading">
@@ -119,6 +121,13 @@ coordenadas
     zoom: 13,
     scrollZoom: true
   });
+  
+  map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
 
   var stores = {
     "type": "FeatureCollection",
