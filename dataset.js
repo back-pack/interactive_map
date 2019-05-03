@@ -2,41 +2,7 @@
 var dataset =
 [
     {
-        "Titulo": "City Tours",
-        "Direccion": {
-            "PuntoA": { "lat": "123123", "long": "123123", "Direccion": "Calle blabla 123"},
-            "Direccion2": { "lat": "123123", "long": "123123"},
-            "Direccion3": { "lat": "123123", "long": "123123"}
-        }
-    },
-    {
-        "Titulo": "CongregacionesDeSoporte",
-        "Direccion":  {
-            "Direccion1": { "lat": "123123", "long": "123123"},
-            "Direccion2": { "lat": "123123", "long": "123123"},
-            "Direccion3": { "lat": "123123", "long": "123123"}
-        }
-
-    },
-    {
-        "Titulo": "Asistencia Temaiken",
-        "Direccion": {
-            "Nombre": { "Nombre" : "Salón del Reino, ZONA GENERAL microcentro CABA.",
-                        "Direccion" : "Tucumán 2024. Congregación anfitriona: SAN TELMO",
-                        "lat": "-58.396021",
-                        "long": "-34.602159",
-                        "Link maps" : "https://www.google.com.ar/maps/place/Tucum%C3%A1n+2024,+C1050AAP+CABA/@-34.6023872,-58.3981926,17z/data=!3m1!4b1!4m5!3m4!1s0x95bccaeac88af511:0x48ba412e73323f47!8m2!3d-34.6023916!4d-58.3960039",
-                        "Contacto de emergencia" : "Leandro Federico Musri",
-                        "Telefono" : "(011) 15-5622-4730",
-                        "Mail" : "CONG03191@jwpub.org" },
-
-            "Direccion2": { "lat": "123123", "long": "123123"},
-            "Direccion3": { "lat": "123123", "long": "123123"}
-        }
-    },
-    {
-        "Titulo": "Hoteles",
-        "Direccion": {
+        "Titulo": "Hoteles", "Direccion": {
             "Nombre" : { "Nombre" : "Park Tower Hotel", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
             "Nombre" : { "Nombre" : "Sheraton Buenos Aires Hotel & Convention Center", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
             "Nombre" : { "Nombre" : "Hilton Buenos Aires", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
@@ -79,6 +45,34 @@ var dataset =
             "Nombre" : { "Nombre" : "Two Hotel Buenos Aires", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
             "Nombre" : { "Nombre" : "Centuria Hotel", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"}
         }
-
-    }
+    },
+        {
+        "Titulo": "Actividades auspiciadas", "Direccion": {
+            "Nombre" : { "Nombre" : "¡Bienvenidos a la sucursal de Argentina!", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Bus City Tour", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Temaikén", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Visita Guiada Casco Histórico – Barrio San Telmo", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Visita Guiada La Boca - Caminito", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Visita Guiada Retiro - Recoleta", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Visita Guiada Palermo", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Visita Guiada Corazón de Buenos Aires - Avenida de Mayo", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"}
+        }
+    },
+        {
+        "Titulo": "Actividades no auspiciadas", "Direccion": {
+            "Nombre" : { "Nombre" : "Paseo por el Río de la Plata y Delta", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Postales de Buenos Aires", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Colonia del Sacramento", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Teatro Colón", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Navegue y almuerce en el Barco Humberto M", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Jardín Japonés", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Buque Museo Fragata Ara Presidente Sarmiento", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Cementerio Recoleta", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Museo Nacional de Bellas Artes", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Museo de la Inmigración", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Museo de la Cárcova – Universidad Nacional de las Artes", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Museo de Arte Latinoamericano de Buenos Aires – MALBA", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+            "Nombre" : { "Nombre" : "Noche de hospitalidad", "Direccion" : "", "lat" :"-58.4605595", "long":"-34.5808679", "links_maps" : "https://www.google.com.ar/maps/@-34.5808679,-58.4605595,18.75z", "comment" : "Comment goes here"},
+        }
+    },
 ];
