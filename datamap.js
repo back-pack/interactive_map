@@ -24,9 +24,9 @@
     // style URL
     style: 'mapbox://styles/mapbox/light-v10',
     // initial position in [long, lat] format
-    center: [-77.034084142948, 38.909671288923],
+    center: [-58.4649283, -34.6278461],
     // initial zoom
-    zoom: 13,
+    zoom: 10,
     scrollZoom: true
   });
   
