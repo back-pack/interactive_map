@@ -121,6 +121,10 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.item:hover {
+  background-color: rgba(1,1,1,0.25);
+}
+
 .listings .item:last-child { border-bottom:none; }
 .listings .item .title {
   display:block;
