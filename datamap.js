@@ -328,7 +328,7 @@
 
   function flyToStore(currentFeature) {
     map.flyTo({
-        center: currentFeature.geometry.coordinates,
+        center: currentFeature.coordinates,
         zoom: 15
       });
   }
@@ -339,9 +339,9 @@
 
 
     var popup = new mapboxgl.Popup({closeOnClick: false})
-          .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>Sweetgreen</h3>' +
-            '<h4>' + currentFeature.properties.address + '</h4>')
+          .setLngLat(currentFeature.coordinates)
+        //   .setHTML('<h3>Sweetgreen</h3>' +
+        //     '<h4>' + currentFeature.properties.address + '</h4>')
           .addTo(map);
   }
   function buildMainLocationList(dataset) {
@@ -366,14 +366,40 @@
         divCollapse.setAttribute('data-parent', '#accordion');
         var dataPointCount = dataset[i].data.length;
         for (j = 0; j < dataPointCount; j++) {
+            link = document.createElement('a');
+            link.setAttribute('href', '#');
+            link.innerHTML = dataset[i].data[j].nombre;
             divItem = document.createElement('div');
             divItem.className = "item";
-            divItem.innerHTML = dataset[i].data[j].Nombre;
+            link.dataPosition = i;
+            divItem.appendChild(link);
             divCollapse.appendChild(divItem);
+
+
+            link.addEventListener('click', function(e) {
+                // Update the currentFeature to the store associated with the clicked link
+                var clickedListing = dataset[this.dataPosition].data;
+
+                // 1. Fly to the point
+                flyToStore(clickedListing);
+
+                // 2. Close all other popups and display popup for clicked store
+                createPopUp(clickedListing);
+
+                // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+                var activeItem = document.getElementsByClassName('active');
+
+                if (activeItem[0]) {
+                activeItem[0].classList.remove('active');
+                }
+                this.parentNode.classList.add('active');
+            });
+            
         }
         divAccordion.appendChild(divHeading);
         divAccordion.appendChild(divCollapse);
     } 
+
   }
 
   function buildLocationList(data) {
