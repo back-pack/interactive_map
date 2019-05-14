@@ -70,6 +70,7 @@
     for (var j = 0; j < dataCount; j++) {
       // Add markers to the map at all points
       var el = document.createElement('div');
+      el.dataPosition = j;
       el.id = "marker-" + j;
       el.className = 'marker';
       new mapboxgl.Marker(el, {offset: [0, -23]})
@@ -78,10 +79,10 @@
 
       el.addEventListener('click', function(e){
           // 1. Fly to the point
-          flyToLocation(marker.data[j]);
+          flyToLocation(marker.data[this.dataPosition]);
 
           // 2. Close all other popups and display popup for clicked store
-          createPopUp(marker.data[j]);
+          createPopUp(marker.data[this.dataPosition]);
 
           // 3. Highlight listing in sidebar (and remove highlight for all other listings)
           var activeItem = document.getElementsByClassName('active');
