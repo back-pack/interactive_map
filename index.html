@@ -21,12 +21,14 @@
     <!-- <div class="geo" onclick="hide()"><i class="material-icons" style="font-size: 41px;">gps_fixed</i>  -->     
     </div>
     <div class='sidebar'>
-      <div id="accordion">
-        <!-- accordion creado dinamicamente aquí -->
-      </div>
       <div class='heading'>
         <h1>Mapa Interactivo</h1>
       </div>
+      <input type="text" id="Search" onkeyup="myFunction()" placeholder="Buscar..." title="Escriba el lugar que quiere buscar.">
+      <div id="accordion">
+        <!-- accordion creado dinamicamente aquí -->
+      </div>
+      
   <!-- para poner un buscador simple en JS en el menu -> https://www.w3schools.com/howto/howto_js_search_menu.asp -->
       <div id='listings' class='listings'></div>
     </div>

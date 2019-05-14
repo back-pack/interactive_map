@@ -53,6 +53,12 @@ body {
   left:10px;
 }
 
+#Search {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+  background-color: white;
+}
 
 .pad2 {
   padding:20px;
