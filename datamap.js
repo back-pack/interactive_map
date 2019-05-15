@@ -136,26 +136,6 @@
         divCollapse.setAttribute('id', 'acordion'+(i+1))  // <div  id=acordion[i]></div>
         divCollapse.className = 'collapse';          // <div id=acordion[i] class='collapse'></div>
 
-        
-        // var divHeading = document.createElement('div');       // ORIGINAL 
-        // divHeading.className = "heading";
-        // var divHeadingNumber = document.createElement('div');
-        // divHeadingNumber.setAttribute('id', 'heading_'+(i+1));
-        // var divSubHeading = document.createElement('div');
-        // divSubHeading.setAttribute('data-toggle', 'collapse');
-        // divSubHeading.setAttribute('data-target', '#collapse_'+(i+1));
-        // divSubHeading.setAttribute('aria-expanded', 'false');
-        // divSubHeading.setAttribute('aria-controls', 'collapse_'+(i+1));
-        // divSubHeading.innerHTML = dataset[i].titulo;
-        // divHeadingNumber.appendChild(divSubHeading);
-        // divHeading.appendChild(divHeadingNumber);
-
-        // var divCollapse = document.createElement('div');
-        // divCollapse.className = 'collapse show';
-        // divCollapse.setAttribute('aria-labelledby', 'heading_'+(i+1));
-        // divCollapse.setAttribute('data-parent', '#accordion');
-
-
         var dataPointCount = dataset[i].data.length;
         for (j = 0; j < dataPointCount; j++) {
             link = document.createElement('a');
