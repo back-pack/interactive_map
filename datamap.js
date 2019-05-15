@@ -122,23 +122,40 @@
   function buildMainLocationList(dataset) {
     var divAccordion = document.getElementById('accordion');
     for (i = 0; i < dataset.length; i++) {
-        var divHeading = document.createElement('div');
-        divHeading.className = "heading";
-        var divHeadingNumber = document.createElement('div');
-        divHeadingNumber.setAttribute('id', 'heading_'+(i+1));
-        var divSubHeading = document.createElement('div');
-        divSubHeading.setAttribute('data-toggle', 'collapse');
-        divSubHeading.setAttribute('data-target', '#collapse_'+(i+1));
-        divSubHeading.setAttribute('aria-expanded', 'false');
-        divSubHeading.setAttribute('aria-controls', 'collapse_'+(i+1));
-        divSubHeading.innerHTML = dataset[i].titulo;
-        divHeadingNumber.appendChild(divSubHeading);
-        divHeading.appendChild(divHeadingNumber);
+        var ahref = document.createElement('a');         // <a>
+        ahref.setAttribute('data-toggle', 'collapse');   // <a data-toggle='collapse'>
+        ahref.setAttribute('href', '#acordion'+(i+1));   // <a data-toggle='collapse' href='#acordion[i]'>
 
-        var divCollapse = document.createElement('div');
-        divCollapse.className = 'collapse show';
-        divCollapse.setAttribute('aria-labelledby', 'heading_'+(i+1));
-        divCollapse.setAttribute('data-parent', '#accordion');
+        var divHeading = document.createElement('div');  // <div>
+        divHeading.className = "heading";                // <div class='heading'></div>
+        divHeading.innerHTML = dataset[i].titulo;        // <div class='heading'>[dataset]</div>
+
+        ahref.appendChild(divHeading)   // <a data-toggle='collapse' href='#acordion[i]'><div class='heading'>[dataset]</div></a>
+
+        var divCollapse = document.createElement('div');  // <div ></div>
+        divCollapse.setAttribute('id', 'acordion'+(i+1))  // <div  id=acordion[i]></div>
+        divCollapse.className = 'collapse';          // <div id=acordion[i] class='collapse'></div>
+
+        
+        // var divHeading = document.createElement('div');       // ORIGINAL 
+        // divHeading.className = "heading";
+        // var divHeadingNumber = document.createElement('div');
+        // divHeadingNumber.setAttribute('id', 'heading_'+(i+1));
+        // var divSubHeading = document.createElement('div');
+        // divSubHeading.setAttribute('data-toggle', 'collapse');
+        // divSubHeading.setAttribute('data-target', '#collapse_'+(i+1));
+        // divSubHeading.setAttribute('aria-expanded', 'false');
+        // divSubHeading.setAttribute('aria-controls', 'collapse_'+(i+1));
+        // divSubHeading.innerHTML = dataset[i].titulo;
+        // divHeadingNumber.appendChild(divSubHeading);
+        // divHeading.appendChild(divHeadingNumber);
+
+        // var divCollapse = document.createElement('div');
+        // divCollapse.className = 'collapse show';
+        // divCollapse.setAttribute('aria-labelledby', 'heading_'+(i+1));
+        // divCollapse.setAttribute('data-parent', '#accordion');
+
+
         var dataPointCount = dataset[i].data.length;
         for (j = 0; j < dataPointCount; j++) {
             link = document.createElement('a');
@@ -172,7 +189,7 @@
             });
             
         }
-        divAccordion.appendChild(divHeading);
+        divAccordion.appendChild(ahref);
         divAccordion.appendChild(divCollapse);
     } 
 
