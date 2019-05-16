@@ -115,8 +115,9 @@
 
     var popup = new mapboxgl.Popup({closeOnClick: false})
           .setLngLat(currentLocations.coordinates)
-          .setHTML('<h3>'+currentLocations.comment+'</h3>' +
-            '<h4>' + currentLocations.nombre + '</h4>')
+          .setHTML('<center><h3>'+currentLocations.comment+'</h3>' +
+            '<h4>' + currentLocations.nombre + '</h4>' +
+            '<h5><a href="'+ currentLocations.links_maps +'" target="_blank">Ver recorrido</a></h5></center>')
           .addTo(map);
   }
   function buildMainLocationList(dataset) {
