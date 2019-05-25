@@ -61,6 +61,17 @@ body {
   background-color: white;
 }
 
+.logo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+  height: 90px;
+  background-image: url('logo.png');
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
 .pad2 {
   padding:20px;
 }
@@ -159,6 +170,7 @@ a:hover {
   width: 56px;
   background-image: url(marker_cooler.png);
   background-color: rgba(0, 0, 0, 0);
+  z-index: 3;
 }
 
 .clearfix { display:block; }
