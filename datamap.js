@@ -122,6 +122,9 @@
   }
   function buildMainLocationList(dataset) {
     var divAccordion = document.getElementById('accordion');
+    var loader = document.getElementById("loading");
+    loader.style.display = "none";
+
     for (i = 0; i < dataset.length; i++) {
         var ahref = document.createElement('a');         // <a>
         ahref.setAttribute('data-toggle', 'collapse');   // <a data-toggle='collapse'>
@@ -175,3 +178,8 @@
     } 
 
   }
+
+function loading() {
+  var loader = getElementById("loading");
+  loader.classList.remove("loading");
+}
