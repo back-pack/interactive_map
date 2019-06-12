@@ -1,7 +1,8 @@
 Tareas pendientes MF
 
 
-menu expandible (ex acordion)
+DONE - menu expandible (ex acordion)
+DONE - loader a la web.
 
 Chequear coordenadas
 
@@ -9,5 +10,5 @@ desactivar items, hoteles, actividades, etc.
 
 hacer andar "Buscar"
 
-loader a la web.
-	https://jsfiddle.net/MrPolywhirl/cbLsc81f/
+crear recorridos a partir de KML data file < https://docs.mapbox.com/mapbox-gl-js/example/geojson-line/ >
+
