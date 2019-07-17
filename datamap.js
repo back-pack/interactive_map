@@ -72,7 +72,7 @@
       var el = document.createElement('div');
       el.dataPosition = j;
       el.id = "marker-" + j;
-      el.className = 'marker';
+      el.className = "marker" + " " + marker.data[j].class;
       new mapboxgl.Marker(el, {offset: [0, -23]})
         .setLngLat(marker.data[j].coordinates)
         .addTo(map);
@@ -113,7 +113,7 @@
     if (popUps[0]) popUps[0].remove();
 
 
-    var popup = new mapboxgl.Popup({closeOnClick: false})
+    var popup = new mapboxgl.Popup({closeOnClick: true})
           .setLngLat(currentLocations.coordinates)
           .setHTML('<center><h3>'+currentLocations.comment+'</h3>' +
             '<h4>' + currentLocations.nombre + '</h4>' +
@@ -135,10 +135,11 @@
         divHeading.innerHTML = dataset[i].titulo;        // <div class='heading'>[dataset]</div>
 
         ahref.appendChild(divHeading)   // <a data-toggle='collapse' href='#acordion[i]'><div class='heading'>[dataset]</div></a>
-
+        
         var divCollapse = document.createElement('div');  // <div ></div>
         divCollapse.setAttribute('id', 'acordion'+(i+1))  // <div  id=acordion[i]></div>
         divCollapse.className = 'collapse';          // <div id=acordion[i] class='collapse'></div>
+
 
         var dataPointCount = dataset[i].data.length;
         for (j = 0; j < dataPointCount; j++) {
