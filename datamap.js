@@ -135,7 +135,34 @@
         divHeading.innerHTML = dataset[i].titulo;        // <div class='heading'>[dataset]</div>
 
         ahref.appendChild(divHeading)   // <a data-toggle='collapse' href='#acordion[i]'><div class='heading'>[dataset]</div></a>
+
+        // <div class="onoff">
+        //   <small>'on / off'</small>
+        //   <label class="switch">
+        //     <input type="checkbox">
+        //     <span class="slider round"></span>
+        //   </label>
+        // </div>
+
+        var onoff = document.createElement('div');
+        onoff.className = "onoff";
+
+        var small = document.createElement('small');
+        small.innerHTML = 'on / off';
+
+        var labelSw = document.createElement('label');
+        labelSw.className = 'switch';
+
+        var inputCheck = document.createElement('input');
+        inputCheck.setAttribute('type', 'checkbox');
+
+        var spanCheck = document.createElement('span');
+        spanCheck.className = 'slider round';
         
+        labelSw.appendChild(inputCheck, spanCheck);
+        onoff.appendChild(small, labelSw);
+
+
         var divCollapse = document.createElement('div');  // <div ></div>
         divCollapse.setAttribute('id', 'acordion'+(i+1))  // <div  id=acordion[i]></div>
         divCollapse.className = 'collapse';          // <div id=acordion[i] class='collapse'></div>
