@@ -144,11 +144,11 @@
         //   </label>
         // </div>
 
-        var onoff = document.createElement('div');
-        onoff.className = "onoff";
+        var onoff = document.createElement('div');  // div 
+        onoff.className = "onoff";                  // div class onoff
 
         var small = document.createElement('small');
-        small.innerHTML = 'on / off';
+        small.innerHTML = 'on / off ';
 
         var labelSw = document.createElement('label');
         labelSw.className = 'switch';
@@ -159,9 +159,10 @@
         var spanCheck = document.createElement('span');
         spanCheck.className = 'slider round';
         
-        labelSw.appendChild(inputCheck, spanCheck);
-        onoff.appendChild(small, labelSw);
-
+        labelSw.appendChild(inputCheck);
+        labelSw.appendChild(spanCheck);
+        onoff.appendChild(small);
+        onoff.appendChild(labelSw);
 
         var divCollapse = document.createElement('div');  // <div ></div>
         divCollapse.setAttribute('id', 'acordion'+(i+1))  // <div  id=acordion[i]></div>
@@ -202,6 +203,7 @@
             
         }
         divAccordion.appendChild(ahref);
+        divAccordion.appendChild(onoff);
         divAccordion.appendChild(divCollapse);
     } 
 
