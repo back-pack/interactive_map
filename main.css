@@ -255,6 +255,10 @@ a:hover {
   z-index: 3;
 }
 
+.marker_hide {
+  display: none;
+}
+
 .clearfix { display:block; }
 .clearfix:after {
   content:'.';

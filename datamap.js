@@ -6,7 +6,10 @@
     sidebar.classList.toggle('cierra');
     x.classList.toggle('cierrax');
   }
+
   
+  
+  // "responsive" Menu
   if (window.matchMedia('(max-width: 500px)').matches) {
   sidebar.classList.add('cierra');
   x.classList.add('cierrax'); 
@@ -58,7 +61,74 @@
     }});
     // Initialize the list
     buildMainLocationList(dataset);
-  });
+
+    // CODIGO DE MUESTRA - BORRAR TODO HASTA LA PROXIMA MARCA
+    
+    map.addLayer({
+      "id": "route",
+      "type": "line",
+      "source": {
+        "type": "geojson",
+        "data": {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-58.3723304,-34.6124882],
+              [-58.3705708,-34.6123734],
+              [-58.3707425,-34.6136008],
+              [-58.3707103,-34.6148105],
+              [-58.3706138,-34.61587],
+              [-58.3715579,-34.615923],
+              [-58.3717403,-34.6160731],
+              [-58.3716866,-34.6171856],
+              [-58.3698735,-34.6171503],
+              [-58.369734,-34.6173357],
+              [-58.3695516,-34.6177065],
+              [-58.3697447,-34.6177595],
+              [-58.3716545,-34.6178743],
+              [-58.3715901,-34.6184747],
+              [-58.3723089,-34.6185012],
+              [-58.3722338,-34.6191104],
+              [-58.3715472,-34.6190839],
+              [-58.3714292,-34.6206555],
+              [-58.3700237,-34.6206379],
+              [-58.3699271,-34.6209557],
+              [-58.369852,-34.6213972],
+              [-58.3697876,-34.6217238],
+              [-58.3713648,-34.6218298],
+              [-58.3713111,-34.6223242],
+              [-58.3712682,-34.623057],
+              [-58.371236,-34.6236485],
+              [-58.3711824,-34.6242047],
+              [-58.3711073,-34.6247698],
+              [-58.3710429,-34.6253172],
+              [-58.3710322,-34.6254849],
+              [-58.3707103,-34.6256615],
+              [-58.370603,-34.6256085],
+              [-58.3704206,-34.6257498],
+              [-58.3703026,-34.6258822],
+              [-58.3700022,-34.6260234],
+              [-58.3699164,-34.6260941],
+              [-58.3696482,-34.6263236],
+              [-58.3695838,-34.6264384],
+            ]
+          }
+        }
+      },
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#888",
+        "line-width": 8
+      }
+    });
+
+
+  });  // BORRAR ESTO 
 
 
   // This is where your interactions with the symbol layer used to be
@@ -155,6 +225,8 @@
 
         var inputCheck = document.createElement('input');
         inputCheck.setAttribute('type', 'checkbox');
+        inputCheck.className = dataset[i].heading_class;
+        inputCheck.setAttribute('onchange', 'hide_markers("' + dataset[i].heading_class + '")');  //No puedo hacer que la variable dataset[i].heading_class se ejecute en 
 
         var spanCheck = document.createElement('span');
         spanCheck.className = 'slider round';
@@ -212,4 +284,10 @@
 function loading() {
   var loader = getElementById("loading");
   loader.classList.remove("loading");
+}
+
+// Hide markers
+function hide_markers(data_hide) {
+  console.log(data_hide);
+  data_hide.classList.toggle('marker_hide');
 }

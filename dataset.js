@@ -3,6 +3,7 @@ var dataset =
 [
     {
         titulo: "Hoteles",
+        heading_class: "class_hotel",
         data: [
             { nombre : "Park Tower Hotel", direccion : "", coordinates: [-58.3731669, -34.5935927], links_maps : "https://www.google.com.ar/maps/place/Park+Tower,+a+Luxury+Collection+Hotel,+Buenos+Aires/@-34.5935927,-58.3753556,17z/data=!3m1!4b1!4m5!3m4!1s0x95bccacacbb6a3f1:0x22e7e5d06b76a92e!8m2!3d-34.5935927!4d-58.3731669", comment : "Hotel", class: "class_hotel"},
             { nombre : "Sheraton Buenos Aires Hotel & Convention Center", direccion : "", coordinates: [-58.3724695, -34.5930539], links_maps : "https://www.google.com.ar/maps/place/Sheraton/@-34.5930539,-58.37431,17z/data=!3m1!4b1!4m5!3m4!1s0x95bccab51a122e41:0x2872fc9ac9a5fe37!8m2!3d-34.5930539!4d-58.3724695", comment : "Hotel", class: "class_hotel"},
@@ -50,6 +51,7 @@ var dataset =
     },
     {
         titulo: "Actividades auspiciadas", 
+        heading_class: "class_aa",
         data: [
             { nombre : "¡Bienvenidos a la sucursal de Argentina!", direccion : "", coordinates: [-58.4605595, -34.5808679], links_maps : " ", comment : "Activ. auspiciadas", class : "class_aa" },
             { nombre : "Bus City Tour", direccion : "", coordinates: [-58.4605595, -34.5808679], links_maps : " ", comment : "Activ. auspiciadas", class : "class_aa" },
@@ -63,6 +65,7 @@ var dataset =
     },
     {
         titulo: "Actividades no auspiciadas", 
+        heading_class: "class_ana",
         data: [
             { nombre : "Paseo por el Río de la Plata y Delta", direccion : "", coordinates: [-58.4605595, -34.5808679], links_maps : " ", comment : "Activ. no auspiciadas", class : "class_ana"},
             { nombre : "Postales de Buenos Aires", direccion : "", coordinates: [-58.4605595, -34.5808679], links_maps : " ", comment : "Activ. no auspiciadas", class : "class_ana"},
